@@ -60,12 +60,17 @@ h2 {
 
 .contact-form-input-check-list {
   padding: 29px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .contact-form-input-check-list .check-list {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 20px;
+  height: 30px;
+  align-items: center;
 }
 
 .contact-form-input-check-list .check-list p {
@@ -79,6 +84,10 @@ h2 {
 .contact-form-input-heading {
   padding-right: 29px;
   padding-left: 29px;
+}
+.contact-form-input-heading h1 {
+  padding: 0px;
+  margin-top: 0px;
 }
 .contact-form-input-heading p {
   font-family: Roboto;
