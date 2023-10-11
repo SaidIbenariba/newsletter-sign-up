@@ -1,0 +1,227 @@
+:root {
+  --main-color: #242742;
+  --white-color: white;
+  --input-border-color: #f64;
+}
+body {
+  font-size: 16px;
+  background-color: var(--main-color);
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+/* Our main compenents */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--main-color);
+}
+h1 {
+  font-family: Roboto;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+h2 {
+  color: #000;
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0px;
+}
+/* Start Contact form */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+}
+.contact-form-container.hide {
+  display: none;
+}
+.contact-form-container {
+  display: flex;
+  max-width: 958px;
+  padding: 32px 36px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 91px;
+  flex-shrink: 0;
+  border-radius: 36px;
+  background: #fff;
+}
+
+.contact-form-input-check-list {
+  padding: 29px;
+}
+.contact-form-input-check-list .check-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.contact-form-input-check-list .check-list p {
+  font-size: medium;
+}
+.contact-form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.contact-form-input-heading {
+  padding-right: 29px;
+  padding-left: 29px;
+}
+.contact-form-input-heading p {
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.email-adress {
+  padding-left: 29px;
+  padding-right: 29px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.email-adress h4 {
+  margin: 0px;
+}
+.email-adress input {
+  display: flex;
+  width: 352px;
+  padding: 15px 14px;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #fff;
+}
+input:focus {
+  border-color: var(--input-border-color) !important;
+}
+.email-adress input.input-error {
+  border-radius: 5px;
+  border: 0.5px solid #f00;
+  background: rgba(255, 0, 0, 0.37);
+  color: rgba(255, 0, 0, 0.3);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.email-adress button {
+  width: 381.18px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 0px;
+  background: var(--main-color, #242742);
+  color: var(--white-color);
+  animation-name: active;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+.btn.active {
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ff5476 0%, #f64 98.96%);
+  box-shadow: 1px 6px 11px -1px #ff5e59;
+}
+
+/* End Contact form */
+/* Mobile Version */
+
+@media (max-width: 1440px) {
+  body {
+    background-color: var(--white-color);
+  }
+  #contact-form {
+    background-color: var(--white-color);
+  }
+  .contact-form-container {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 440px;
+    gap: 0px;
+    padding: 0px;
+    padding-bottom: 50px;
+  }
+  .contact-form-container > div {
+    max-width: 440px;
+  }
+  .contact-form-container-success {
+    height: auto;
+  }
+}
+/* Start Success State Desktop */
+.contact-form-container-success {
+  display: flex;
+  flex-direction: column;
+  width: 315px;
+  height: 315px;
+  padding: 25px 32px;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  border-radius: 36px;
+  background: #fff;
+  gap: 20px;
+}
+.contact-form-container-success.mobile {
+  display: flex;
+  flex-direction: column;
+  width: 315px;
+  /* height: 315px; */
+  padding: 32px 36px;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  border-radius: 36px;
+  background: #fff;
+  gap: 285px;
+}
+.contact-form-container-success img {
+  width: 50px;
+}
+.contact-form-container-success p {
+  margin: 0px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.contact-form-container-success p span {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.contact-form-container-success button {
+  width: 311px;
+  height: 50px;
+  border-radius: 5px;
+  background: var(--main-color, #242742);
+  color: var(--white-color);
+  border: 0px;
+}
+.contact-form-container-success.hide {
+  display: none;
+}
+#Subscribe-btn.btn.success.active {
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ff5476 0%, #f64 98.96%);
+  box-shadow: 1px 6px 11px -1px #ff5e59;
+}
+
+/* End Active State Desktop */
